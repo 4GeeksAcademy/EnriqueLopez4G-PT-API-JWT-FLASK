@@ -1,6 +1,8 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			token: localStorage.getItem("access_token") || undefined, // Recupera el token del localStorage al cargar la app
+			email: null,
 			message: null,
 			demo: [
 				{
@@ -46,7 +48,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
-			}
+			},
+			setToken: (token,email) => {
+				console.log(token)
+				localStorage.setItem("superToken4G", token); // Guarda el token en localStorage
+				setStore({ token,email }); // Guarda el token en el store global
+			  },
+
+			logout: () => {
+				localStorage.removeItem("superToken4G"); // Elimina el token del localStorage
+				setStore({ token: null, email: null }); // Limpia el token y el email en el store global
+			},
+			 
 		}
 	};
 };
