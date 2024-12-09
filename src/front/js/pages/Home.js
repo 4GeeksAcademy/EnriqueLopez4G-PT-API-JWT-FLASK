@@ -19,11 +19,9 @@ const Home = () => {
   return (
     <div className="container mt-5 text-center">
       <h1 className="text-primary" style={{ fontFamily: 'Georgia, serif', fontSize: '60px', letterSpacing: '2px', marginBottom: '20px' }}>
-        Enrique Lopez4G
+        Enrique Lopez4G te da la bienvenida!
       </h1>
-      <h2 className="text-dark" style={{ fontFamily: 'Arial, sans-serif', fontSize: '35px', marginBottom: '30px' }}>
-        ¡Bienvenido a nuestra aplicación!
-      </h2>
+      
       <p style={{ fontSize: '20px', color: '#555', marginBottom: '40px' }}>
         Por favor, elige una opción para continuar:
       </p>
